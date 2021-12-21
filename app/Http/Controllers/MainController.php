@@ -34,8 +34,6 @@ class MainController extends Controller
     $data['event_count']   = $event->get()->count();
     $data['title']         = 'Beranda Admin';
 
-    // dd($data);
-
     return view('welcome', $data);
   }
 }

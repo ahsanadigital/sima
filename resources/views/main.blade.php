@@ -64,11 +64,6 @@
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary btn-block mb-3">Log-In</button>
 
-              <!-- Forgot Password Section -->
-              <div class="text-center">
-                <a href="{{ url('forgot-password') }}">Forgot Your Password?</a>
-              </div>
-
             </form>
           </div>
 

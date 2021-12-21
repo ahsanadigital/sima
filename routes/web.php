@@ -51,7 +51,12 @@ Route::prefix('event')->group(function () {
   Route::get('/competition', [\App\Http\Controllers\User\EventController::class, 'competition'])->name('event.competition');
   Route::get('/scholarship', [\App\Http\Controllers\User\EventController::class, 'scholarship'])->name('event.scholarship');
 });
-Route::resource('agenda', \App\Http\Controllers\User\AgendaController::class);
+
+Route::prefix('agenda')->group(function () {
+  Route::get('/', [\App\Http\Controllers\User\AgendaController::class, 'index'])->name('agenda.index');
+  Route::any('/api', [\App\Http\Controllers\User\AgendaController::class, 'api'])->name('agenda.api');
+  Route::any('/{id}/delete', [\App\Http\Controllers\User\AgendaController::class, 'delete'])->name('agenda.delete');
+});
 
 # Admin Section
 Route::prefix('admin')->group(function () {

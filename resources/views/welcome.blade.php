@@ -47,15 +47,6 @@
         </div>
       </div>
     </div>
-
-    @auth('user')
-    <div class="card card-body shadow border-0 mt-3">
-      <div class="d-flex mb-3 justify-content-between">
-        <h3>Notification</h3>
-        <div><a href="{{ url('/notification') }}" class="btn btn-primary">Look All</a></div>
-      </div>
-    </div>
-    @endauth
   </div>
   <div class="col-md-5 mb-4">
     <div class="card card-body shadow">
